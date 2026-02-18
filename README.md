@@ -1,37 +1,26 @@
-# 🚀 Estimativa de Custos AWS: Aplicação Web de Três Camadas
+# 🎓 Projeto Final: Operações em Nuvem (AWS Educate)
 
-> **Projeto prático desenvolvido durante o treinamento da Escola da Nuvem.**
+Este repositório contém o projeto final de conclusão do curso **Operações em Nuvem** da plataforma **AWS Educate**. O desafio consistiu em arquitetar e estimar os custos de uma solução escalável e de alta disponibilidade na AWS.
 
-## 📌 Visão Geral
-Este repositório documenta o processo de análise financeira e técnica para a implementação de uma infraestrutura na nuvem AWS. Utilizando a **AWS Pricing Calculator**, foi elaborada uma estimativa detalhada para uma aplicação web resiliente e escalável.
+## 🎯 Objetivo do Projeto
+Demonstrar proficiência no uso da **AWS Pricing Calculator** para planejar o custo total de propriedade (TCO) de uma aplicação web de três camadas, aplicando conceitos de escalabilidade, alta disponibilidade e otimização de custos (FinOps).
 
-## 🏗️ Arquitetura e Fluxo do Lab
-Para este estudo de caso, projetei o seguinte fluxo de trabalho e componentes:
+## 📊 Arquitetura Estimada & Fluxo
+Abaixo, apresento o diagrama que desenvolvi para ilustrar o fluxo:
 
-![Fluxo do Processo](./diagrama_animado.svg)
+![Diagrama de Fluxo](./diagrama_animado.svg)
 
-### Componentes Estimados:
+### Detalhes da Infraestrutura (Região Oregon):
+*   **Networking:** 1 Application Load Balancer (ALB) para gestão de tráfego (400 req/s).
+*   **Computação (EC2):** Instâncias **t4g.small** (Linux) com modelo de escalabilidade para picos de demanda.
+*   **Banco de Dados (RDS):** MySQL em **Multi-AZ** (db.m6g.large) para garantir resiliência e failover automático.
+*   **Armazenamento e Tráfego:** Configuração de volumes EBS gp3, armazenamento RDS gp2 e 200GB de saída de dados (Data Transfer Out).
 
-*   **Load Balancer (ALB):**
-    *   Configurado para 400 requisições/seg e 100 novas conexões/seg.
-    *   20 avaliações de regra por solicitação.
-*   **Amazon EC2 (Camada de Aplicação):**
-    *   Instâncias **t4g.small** (Processadores AWS Graviton).
-    *   Escalabilidade dinâmica: 1 instância (Base) / 2 instâncias (Pico).
-    *   Armazenamento: 30 GB SSD (gp3).
-    *   Tráfego de saída: 200 GB/mês.
-*   **Amazon RDS (Camada de Dados):**
-    *   Motor MySQL com instância **db.m6g.large**.
-    *   Implantação **Multi-AZ** para alta disponibilidade.
-    *   Armazenamento: 100 GB SSD (gp2).
+## 🛠️ Competências Desenvolvidas
+*   **Análise de Custos:** Modelagem financeira detalhada de serviços de nuvem.
+*   **Design de Arquitetura:** Seleção de instâncias e estratégias de implantação baseadas em requisitos de carga.
+*   **Documentação Técnica:** Elaboração de diagramas de fluxo e exportação de relatórios (CSV) para suporte à decisão.
 
-## 🛠️ Ferramentas Utilizadas
-*   **AWS Pricing Calculator**: Modelagem de custos.
-*   **Diagramação**: Criação de fluxo visual personalizado.
-*   **Região**: US West (Oregon).
-
-## 📈 Conclusões do Projeto
-O laboratório permitiu aplicar conceitos de **FinOps**, entendendo como a escolha de instâncias (Graviton) e modelos de implantação (Multi-AZ) impactam o custo total de propriedade (TCO). A estimativa final foi exportada em CSV para análise em planilhas e compartilhada via link público para stakeholders.
 
 ---
-✨ *Projeto focado em Arquitetura de Soluções e Gestão de Custos em Nuvem.*
+🚀 *Projeto finalizado com sucesso como parte da trilha de aprendizado em Cloud Computing.*
