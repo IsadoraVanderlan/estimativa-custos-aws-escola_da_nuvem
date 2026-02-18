@@ -8,7 +8,7 @@ Este repositório documenta o processo de análise financeira e técnica para a 
 ## 🏗️ Arquitetura e Fluxo do Lab
 Para este estudo de caso, projetei o seguinte fluxo de trabalho e componentes:
 
-![Fluxo do Processo](./diagrama.jpg)
+![Fluxo do Processo](./diagrama_animado.svg)
 
 ### Componentes Estimados:
 
